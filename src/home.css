@@ -1,0 +1,92 @@
+* {
+    font-family: sans-serif;
+    margin: 0;
+}
+
+html, body {
+    height: 100%;
+    margin-top: 0;
+    padding: 0;
+    overflow-y: hidden;
+}
+
+
+.container{
+    background-color: lightblue;
+    min-height: 100%;
+    padding-top: 1em;
+}
+
+nav{
+    width: 150px;
+    float: left;
+    margin-right: 2em;
+    padding-right: 3em;
+    padding-left: 1.5em;
+    height: 100%;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    border-right: 0.1em solid black;
+    box-shadow: black 0.1em 0.2em 0.4em;
+    margin-top: 0;
+}
+
+nav a {
+    font-size: 1.2em;
+    margin-top: 0.25em;
+    margin-bottom: 0.25em;
+    text-decoration: none;
+    color: black;
+}
+
+
+header h1 {
+    text-align: center;
+}
+
+header{
+    padding-top: 1.2em;
+    padding-bottom: 1.2em;
+    background-color: rgb(255, 255, 255);
+    border-bottom: solid black 0.1em;
+    box-shadow: 0.2em 0.2em 0.2em 0.4em;
+}
+
+#logo {
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
+}
+
+.artikelsuche, .artikelQuiz, .wortUebersetzer{
+    border: solid black 0.15em;
+    margin: 3em 10em 0 20em;
+    padding: 2em;
+    border-radius: 0.6em;
+    box-shadow: 0.2em 0.2em 0.5em;
+    background-color: rgb(255, 255, 255);
+}
+
+.artikelsuche h2, #userInput{
+    margin-bottom: 0.5em;
+}
+
+.artikelsuche #begriff, #artikel{
+    font-size: 1.5em;
+}
+
+.artikelQuiz h2, p{
+    margin-bottom: 0.5em;
+}
+
+.wortUebersetzer h2, p{
+    margin-bottom: 0.5em;
+}
+
+footer{
+    text-align: center;
+    padding: 1.2em 0 1.2em 0;
+    position: relative;
+    background-color: rgb(255, 255, 255);;
+}

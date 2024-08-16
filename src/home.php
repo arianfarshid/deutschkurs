@@ -43,16 +43,25 @@ class home extends Page
         $data = $this->getViewData();
         $this->generatePageHeader('Homepage','home.css');
         echo <<< HTML
-            <nav>
-                <img src="logo.jpg" alt="" id="logo">
-                <a href="home.php?id=artikel" id="navArtikel">Deutsche Artikel</a>
-                <a href="home.php?id=uebersetzer" id="navUebersetzer">Übersetzer</a>
-                <a href="home.php?id=Grammatik" id="navGrammatik">Grammatik</a>
-                <a href="home.php?id=rechtschreibung" id="navRechtschreibung">Rechtschreibung</a>
-            </nav>
             <header>
                 <h1>Deutschkurs</h1>
             </header>
+            <nav>
+                <img src="logo.png" id="logo" alt="">
+                <section class="navigation">
+                    <a href="home.php?id=artikel" id="navArtikel">Deutsche Artikel</a>
+                    <a href="home.php?id=uebersetzer" id="navUebersetzer">Übersetzer</a>
+                    <a href="home.php?id=Grammatik" id="navGrammatik">Grammatik</a>
+                    <a href="home.php?id=rechtschreibung" id="navRechtschreibung">Rechtschreibung</a>
+                </section>
+                <section class="login_data">
+                    <section id="user_pic_name">
+                        <img src="defaultProfile.png" id="user_pic" alt="">
+                        <p id="login_user_name">Name</p>
+                    </section>
+                    <p>Score: <span id="user_score">-</span></p>
+                </section>
+            </nav>
         HTML;
 
         if(isset($_SESSION['answer'])){
@@ -62,51 +71,10 @@ class home extends Page
 
         switch($this->index){
             case "artikel":
-                echo <<< EOT
-                    <script src="suche.js"></script>
-                    <section class="container">
-                        <section class="artikelsuche">
-                            <h2>Artikelsuche</h2>
-                            <form action="home.php?id=artikel" method="post">
-                                <input type="text" name="suche" id="userInput" placeholder="Suche nach...">
-                            </form>
-                            <p><span id="begriff"></span><span id="artikel"></span></p>
-                            <p id="satz"></p>
-                        </section>
-                        <section class="artikelQuiz">
-                            <h2>Artikel-Quiz</h2>
-                            <p>Wie lautet der Artikel von <span id="quizBegriff">{$data['Begriff']}</span>?</p>
-                            <p>
-                                <form action="home.php?id=artikel" method="post" id="radioForm" >
-                                    <input type="radio" name="artikelRadio" id="artikelDer" value="der" onclick="document.forms['radioForm'].submit()">
-                                    <label for="artikelDer">Der</label>
-                                    <input type="radio" name="artikelRadio" id="artikelDie" value="die" onclick="document.forms['radioForm'].submit()">
-                                    <label for="artikelDie">Die</label>
-                                    <input type="radio" name="artikelRadio" id="artikelDas" value="das" onclick="document.forms['radioForm'].submit()">
-                                    <label for="artikelDas">Das</label>
-                                    <input type="hidden" name="begriffHidden" value="{$data['Begriff']}">
-                                </form>
-                            </p>
-                            {$this->message}
-                        </section>
-                    </section>
-                EOT;
+                $this->generateArtikelPage($data);
                 break;
             case "uebersetzer":
-                echo <<< EOT
-                <script src="uebersetzer.js"></script>
-                    <section class="container">
-                        <section class="wortUebersetzer">
-                            <h2>Wortübersetzer</h2>
-                            <form action="home.php?id=uebersetzer" method="post" accept-charset="UTF-8">
-                                <input type="text" name="uebersetzungWort" id="gesuchtesWort" placeholder="Suche nach...">
-                            </form>
-                            <p>Persische Übersetzung: <span id="uebersetzung"></span></p>
-                            <p><span id="deutscherSatz"></span></p>
-                            <p><span id="persischerSatz"></span></p>
-                        </section>
-                    </section>
-                EOT;
+                $this->generateTranslatorPage();
                 break;
             default:
                 echo <<< EOT
@@ -162,6 +130,67 @@ class home extends Page
 
             header("Location: home.php?id=".$this->index);
         }
+    }
+
+    private function generateArtikelPage($data):void
+    {
+        echo <<< EOT
+                    <script src="suche.js"></script>
+                    <section class="container">
+                        <section class="artikelsuche">
+                            <h2>Artikelsuche</h2>
+                            <form action="home.php?id=artikel" method="post">
+                                <input type="text" name="suche" id="userInput" placeholder="Suche nach...">
+                            </form>
+                            <p><span id="begriff"></span><span id="artikel"></span></p>
+                            <p id="satz"></p>
+                        </section>
+                        <section class="artikelQuiz">
+                            <h2>Artikel-Quiz</h2>
+                            <p>Wie lautet der Artikel von <span id="quizBegriff">{$data['Begriff']}</span>?</p>
+                            <p>
+                                <form action="home.php?id=artikel" method="post" id="radioForm" >
+                                    <input type="radio" name="artikelRadio" id="artikelDer" value="der" onclick="document.forms['radioForm'].submit()">
+                                    <label for="artikelDer">Der</label>
+                                    <input type="radio" name="artikelRadio" id="artikelDie" value="die" onclick="document.forms['radioForm'].submit()">
+                                    <label for="artikelDie">Die</label>
+                                    <input type="radio" name="artikelRadio" id="artikelDas" value="das" onclick="document.forms['radioForm'].submit()">
+                                    <label for="artikelDas">Das</label>
+                                    <input type="hidden" name="begriffHidden" value="{$data['Begriff']}">
+                                </form>
+                            </p>
+                            {$this->message}
+                        </section>
+                    </section>
+                EOT;
+    }
+
+    private function generateTranslatorPage():void
+    {
+        echo <<< EOT
+                <script src="uebersetzer.js"></script>
+                    <section class="container">
+                        <section class="wortUebersetzer">
+                            <h2>Wortübersetzer</h2>
+                            <form action="home.php?id=uebersetzer" method="post" accept-charset="UTF-8">
+                                <input type="text" name="uebersetzungWort" id="gesuchtesWort" placeholder="Suche nach...">
+                            </form>
+                            <p><span id="uebersetzung"></span></p>
+                            <p><span id="deutscherSatz"></span></p>
+                            <p><span id="persischerSatz"></span></p>
+                        </section>
+                        <section class="addWord">
+                            <h2>Wort hinzufügen</h2>
+                            <form action="home.php?id=uebersetzer" method="post" accept-charset="UTF-8">
+                                <p>Begriff:
+                                <input type="text" name="begriffEingabe" id="begriffEingabe" placeholder="Wort eingeben..."> 
+                                </p>
+                            </form>
+                        </section>
+                    </section>
+
+                    
+                EOT;
     }
 
     public static function main():void

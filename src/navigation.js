@@ -3,13 +3,13 @@ function markIndex() {
     if (index && index.value == 'artikel') {
         let artikel = document.getElementById('navArtikel');
         if (artikel) {
-            artikel.style.transform = "scale(1.2)";
+            artikel.style.color = "#4CAF50";
         }
     }
     if(index && index.value == 'uebersetzer'){
         let uebersetzer = document.getElementById('navUebersetzer');
         if(uebersetzer){
-            uebersetzer.style.transform = "scale(1.2)";
+            uebersetzer.style.color = "#4CAF50";
         }
     }
 }

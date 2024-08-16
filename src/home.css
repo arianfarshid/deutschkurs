@@ -105,7 +105,7 @@ header{
     padding: 2em;
     border-radius: 0.6em;
     box-shadow: 0.2em 0.2em 0.5em;
-    min-width: 20em;
+    min-width: 25em;
     max-height: 20em;
 }
 
@@ -130,4 +130,32 @@ footer{
     padding: 1.2em 0 1.2em 0;
     background-color: #2C3E50;
     color: #ECF0F1;
+}
+
+.addWord h2{
+    margin-bottom: 0.5em;
+}
+
+.addWord{
+    overflow-y: scroll;
+}
+
+td {
+    padding-right: 5em;
+}
+
+#uebersetzung{
+    display: block;
+    text-align: right;
+    font-size: 2em;
+}
+
+#persischerSatz, .persischerText{
+    display: block;
+    text-align: right;
+}
+
+#quizBegriff{
+    font-weight: bold;
+    font-size: 1.2em;
 }

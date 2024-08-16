@@ -92,6 +92,39 @@ class home extends Page
         $this->generatePageFooter();
     }
 
+    private function processAddWordData():void
+    {
+        if(isset($_POST['begriffEingabe']) &&
+            isset($_POST['persischEingabe']) &&
+            isset($_POST['artikelEingabe'])){
+            $begriff = htmlspecialchars($_POST['begriffEingabe']);
+            $persisch = htmlspecialchars($_POST['persischEingabe']);
+            $artikel = htmlspecialchars($_POST['artikelEingabe']);
+            $satzEingabe = (isset($_POST['satzEingabe'])) ? htmlspecialchars($_POST['satzEingabe']) : '';
+            $persischerSatzEingabe = (isset($_POST['persischerSatzEingabe'])) ? htmlspecialchars($_POST['persischerSatzEingabe']) : '';
+
+
+            $neuerEintrag = [
+                "Begriff" => $begriff,
+                "Artikel" => $artikel,
+                "Satz" => $satzEingabe,
+                "Persisch" => $persisch,
+                "PersischerSatz" => $persischerSatzEingabe
+            ];
+
+            $jsonDatei = 'woerter.json';
+            $jsonInhalt = file_get_contents($jsonDatei);
+
+            $woerterbuch = json_decode($jsonInhalt, true);
+            $woerterbuch['Woerterbuch'][] = $neuerEintrag;
+
+            $neuerJsonInhalt = json_encode($woerterbuch, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE);
+            file_put_contents($jsonDatei, $neuerJsonInhalt);
+
+            header("Location: home.php?id=uebersetzer");
+        }
+    }
+
     protected function processReceivedData():void
     {
         parent::processReceivedData();
@@ -130,6 +163,8 @@ class home extends Page
 
             header("Location: home.php?id=".$this->index);
         }
+
+        $this->processAddWordData();
     }
 
     private function generateArtikelPage($data):void
@@ -139,6 +174,8 @@ class home extends Page
                     <section class="container">
                         <section class="artikelsuche">
                             <h2>Artikelsuche</h2>
+                            <p>Hier können Sie nach einem deutschen Begriff suchen, und der dazugehörige Artikel wird angezeigt.</p>
+                            <p class="persischerText">در اینجا می‌توانید یک واژه آلمانی را جستجو کنید و حرف تعریفی مرتبط با آن نمایش داده خواهد شد</p>
                             <form action="home.php?id=artikel" method="post">
                                 <input type="text" name="suche" id="userInput" placeholder="Suche nach...">
                             </form>
@@ -147,6 +184,8 @@ class home extends Page
                         </section>
                         <section class="artikelQuiz">
                             <h2>Artikel-Quiz</h2>
+                            <p>Hier können Sie Ihr Wissen über deutsche Artikel testen.</p>
+                            <p class="persischerText">در اینجا می‌توانید دانش خود را در زمینه‌ی حروف تعریف آلمانی بیازمایید</p>
                             <p>Wie lautet der Artikel von <span id="quizBegriff">{$data['Begriff']}</span>?</p>
                             <p>
                                 <form action="home.php?id=artikel" method="post" id="radioForm" >
@@ -172,6 +211,8 @@ class home extends Page
                     <section class="container">
                         <section class="wortUebersetzer">
                             <h2>Wortübersetzer</h2>
+                            <p>Hier können Sie deutsche Begriffe eingeben und die persische Übersetzung sowie gegebenenfalls einen Beispielsatz erhalten.</p>
+                            <p class="persischerText">در اینجا می‌توانید واژگان آلمانی را وارد کرده و ترجمه فارسی آن‌ها را همراه با یک جمله نمونه، در صورت وجود، دریافت کنید</p>
                             <form action="home.php?id=uebersetzer" method="post" accept-charset="UTF-8">
                                 <input type="text" name="uebersetzungWort" id="gesuchtesWort" placeholder="Suche nach...">
                             </form>
@@ -181,10 +222,41 @@ class home extends Page
                         </section>
                         <section class="addWord">
                             <h2>Wort hinzufügen</h2>
+                            <p>Falls das Wort im Wörterbuch nicht vorhanden ist, können Sie es gerne hinzufügen. Geben Sie dazu einfach die erforderlichen Daten ein.</p>
+                            <p class="persischerText">اگر واژه مورد نظر در فرهنگ لغت موجود نیست، می‌توانید آن را به‌راحتی اضافه کنید. برای این کار، داده‌های لازم را وارد کنید</p>
+                            <br>
                             <form action="home.php?id=uebersetzer" method="post" accept-charset="UTF-8">
-                                <p>Begriff:
-                                <input type="text" name="begriffEingabe" id="begriffEingabe" placeholder="Wort eingeben..."> 
+                                <table>
+                                    <tr>
+                                        <td>Begriff</td>
+                                        <td><input type="text" name="begriffEingabe" id="begriffEingabe" placeholder="Wort eingeben..." required></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Persisch</td>
+                                        <td><input type="text" name="persischEingabe" id="persischEingabe" placeholder="Persische Übersetzung..." required> </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Artikel</td>
+                                        <td>
+                                            <input type="radio" name="artikelEingabe" id="artikelEingabeDer" value="der">
+                                            <label for="artikelEingabeDer">Der</label>
+                                            <input type="radio" name="artikelEingabe" id="artikelEingabeDie" value="die">
+                                            <label for="artikelEingabeDie">Die</label>
+                                            <input type="radio" name="artikelEingabe" id="artikelEingabeDas" value="das">
+                                            <label for="artikelEingabeDas">Das</label>
+                                        </td>
+                                    </tr>
+                                </table>
+                                <br>
+                                <p>
+                                    Hier können Sie einen Beispielssatz eingeben: <br>
+                                    <textarea name="satzEingabe" id="satzEingabe" rows="5" cols="40"></textarea>
                                 </p>
+                                <p>
+                                    Hier können Sie die persische Übersetzung des Satzes Eingeben: <br>
+                                    <textarea name="persischerSatzEingabe" id="persischerSatzEingabe" rows="5" cols="40"></textarea>
+                                </p>
+                                <input type="submit" value="Abschicken">
                             </form>
                         </section>
                     </section>

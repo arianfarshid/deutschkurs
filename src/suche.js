@@ -37,6 +37,7 @@ function process(intext){
     let satzH = document.getElementById("satz");
     satzH.textContent = satz;
 
+
     if(artikel == "die"){
         artikelH.style.color = "red";
     } else if(artikel == "der"){

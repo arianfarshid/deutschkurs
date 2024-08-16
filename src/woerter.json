@@ -1,746 +1,767 @@
 {
-  "Woerterbuch": [
-    {
-      "Begriff": "Haus",
-      "Artikel": "das",
-      "Satz": "Das Haus ist groß und hat einen schönen Garten.",
-      "Persisch": "خانه",
-      "PersischerSatz": "خانه بزرگ است و یک باغ زیبا دارد."
-    },
-    {
-      "Begriff": "Baum",
-      "Artikel": "der",
-      "Satz": "Der Baum im Park ist sehr alt.",
-      "Persisch": "درخت",
-      "PersischerSatz": "درخت در پارک خیلی قدیمی است."
-    },
-    {
-      "Begriff": "Auto",
-      "Artikel": "das",
-      "Satz": "Das Auto ist neu und sehr schnell.",
-      "Persisch": "اتومبیل",
-      "PersischerSatz": "اتومبیل جدید و بسیار سریع است."
-    },
-    {
-      "Begriff": "Schule",
-      "Artikel": "die",
-      "Satz": "Die Schule beginnt um acht Uhr morgens.",
-      "Persisch": "مدرسه",
-      "PersischerSatz": "مدرسه ساعت هشت صبح شروع می‌شود."
-    },
-    {
-      "Begriff": "Hund",
-      "Artikel": "der",
-      "Satz": "Der Hund bellt laut im Garten.",
-      "Persisch": "سگ",
-      "PersischerSatz": "سگ در حیاط به‌طور بلند پارس می‌کند."
-    },
-    {
-      "Begriff": "Apfel",
-      "Artikel": "der",
-      "Satz": "Der Apfel schmeckt heute besonders süß.",
-      "Persisch": "سیب",
-      "PersischerSatz": "سیب امروز به‌خصوص شیرین است."
-    },
-    {
-      "Begriff": "Buch",
-      "Artikel": "das",
-      "Satz": "Das Buch auf dem Tisch ist sehr interessant.",
-      "Persisch": "کتاب",
-      "PersischerSatz": "کتاب روی میز بسیار جالب است."
-    },
-    {
-      "Begriff": "Stadt",
-      "Artikel": "die",
-      "Satz": "Die Stadt ist bekannt für ihre historischen Gebäude.",
-      "Persisch": "شهر",
-      "PersischerSatz": "شهر به خاطر ساختمان‌های تاریخی‌اش معروف است."
-    },
-    {
-      "Begriff": "Fahrrad",
-      "Artikel": "das",
-      "Satz": "Das Fahrrad steht vor dem Haus.",
-      "Persisch": "دوچرخه",
-      "PersischerSatz": "دوچرخه در جلوی خانه قرار دارد."
-    },
-    {
-      "Begriff": "Katze",
-      "Artikel": "die",
-      "Satz": "Die Katze schläft auf dem Sofa.",
-      "Persisch": "گربه",
-      "PersischerSatz": "گربه روی مبل خوابیده است."
-    },
-    {
-      "Begriff": "Tisch",
-      "Artikel": "der",
-      "Satz": "Der Tisch ist aus Holz.",
-      "Persisch": "میز",
-      "PersischerSatz": "میز از چوب ساخته شده است."
-    },
-    {
-      "Begriff": "Stuhl",
-      "Artikel": "der",
-      "Satz": "Der Stuhl ist bequem.",
-      "Persisch": "صندلی",
-      "PersischerSatz": "صندلی راحت است."
-    },
-    {
-      "Begriff": "Fenster",
-      "Artikel": "das",
-      "Satz": "Das Fenster lässt viel Licht herein.",
-      "Persisch": "پنجره",
-      "PersischerSatz": "پنجره نور زیادی را به داخل می‌آورد."
-    },
-    {
-      "Begriff": "Tür",
-      "Artikel": "die",
-      "Satz": "Die Tür ist rot gestrichen.",
-      "Persisch": "در",
-      "PersischerSatz": "در رنگ قرمز دارد."
-    },
-    {
-      "Begriff": "Straße",
-      "Artikel": "die",
-      "Satz": "Die Straße ist sehr laut.",
-      "Persisch": "خیابان",
-      "PersischerSatz": "خیابان خیلی شلوغ است."
-    },
-    {
-      "Begriff": "Flughafen",
-      "Artikel": "der",
-      "Satz": "Der Flughafen ist weit von hier entfernt.",
-      "Persisch": "فرودگاه",
-      "PersischerSatz": "فرودگاه از اینجا دور است."
-    },
-    {
-      "Begriff": "Bahnhof",
-      "Artikel": "der",
-      "Satz": "Der Bahnhof liegt im Stadtzentrum.",
-      "Persisch": "ایستگاه قطار",
-      "PersischerSatz": "ایستگاه قطار در مرکز شهر واقع شده است."
-    },
-    {
-      "Begriff": "Küche",
-      "Artikel": "die",
-      "Satz": "Die Küche ist sehr modern.",
-      "Persisch": "آشپزخانه",
-      "PersischerSatz": "آشپزخانه بسیار مدرن است."
-    },
-    {
-      "Begriff": "Badezimmer",
-      "Artikel": "das",
-      "Satz": "Das Badezimmer ist frisch renoviert.",
-      "Persisch": "حمام",
-      "PersischerSatz": "حمام تازه بازسازی شده است."
-    },
-    {
-      "Begriff": "Garten",
-      "Artikel": "der",
-      "Satz": "Der Garten hat viele bunte Blumen.",
-      "Persisch": "باغ",
-      "PersischerSatz": "باغ دارای گل‌های رنگارنگ زیادی است."
-    },
-    {
-      "Begriff": "Wasser",
-      "Artikel": "das",
-      "Satz": "Das Wasser ist kalt.",
-      "Persisch": "آب",
-      "PersischerSatz": "آب سرد است."
-    },
-    {
-      "Begriff": "Brot",
-      "Artikel": "das",
-      "Satz": "Das Brot ist frisch gebacken.",
-      "Persisch": "نان",
-      "PersischerSatz": "نان تازه پخته شده است."
-    },
-    {
-      "Begriff": "Milch",
-      "Artikel": "die",
-      "Satz": "Die Milch ist im Kühlschrank.",
-      "Persisch": "شیر",
-      "PersischerSatz": "شیر در یخچال است."
-    },
-    {
-      "Begriff": "Kaffee",
-      "Artikel": "der",
-      "Satz": "Der Kaffee ist stark.",
-      "Persisch": "قهوه",
-      "PersischerSatz": "قهوه قوی است."
-    },
-    {
-      "Begriff": "Tee",
-      "Artikel": "der",
-      "Satz": "Der Tee ist heiß.",
-      "Persisch": "چای",
-      "PersischerSatz": "چای داغ است."
-    },
-    {
-      "Begriff": "Kuchen",
-      "Artikel": "der",
-      "Satz": "Der Kuchen ist süß.",
-      "Persisch": "کیک",
-      "PersischerSatz": "کیک شیرین است."
-    },
-    {
-      "Begriff": "Fisch",
-      "Artikel": "der",
-      "Satz": "Der Fisch schwimmt im Wasser.",
-      "Persisch": "ماهی",
-      "PersischerSatz": "ماهی در آب شنا می‌کند."
-    },
-    {
-      "Begriff": "Fleisch",
-      "Artikel": "das",
-      "Satz": "Das Fleisch ist zart.",
-      "Persisch": "گوشت",
-      "PersischerSatz": "گوشت نرم است."
-    },
-    {
-      "Begriff": "Gemüse",
-      "Artikel": "das",
-      "Satz": "Das Gemüse ist frisch.",
-      "Persisch": "سبزیجات",
-      "PersischerSatz": "سبزیجات تازه هستند."
-    },
-    {
-      "Begriff": "Obst",
-      "Artikel": "das",
-      "Satz": "Das Obst ist gesund.",
-      "Persisch": "میوه‌ها",
-      "PersischerSatz": "میوه‌ها سالم هستند."
-    },
-    {
-      "Begriff": "Kleid",
-      "Artikel": "das",
-      "Satz": "Das Kleid ist elegant.",
-      "Persisch": "لباس",
-      "PersischerSatz": "لباس شیک است."
-    },
-    {
-      "Begriff": "Hemd",
-      "Artikel": "das",
-      "Satz": "Das Hemd ist blau.",
-      "Persisch": "پیراهن",
-      "PersischerSatz": "پیراهن آبی است."
-    },
-    {
-      "Begriff": "Jacke",
-      "Artikel": "die",
-      "Satz": "Die Jacke hält warm.",
-      "Persisch": "کت",
-      "PersischerSatz": "کت گرم نگه می‌دارد."
-    },
-    {
-      "Begriff": "Schuhe",
-      "Artikel": "die",
-      "Satz": "Die Schuhe sind bequem.",
-      "Persisch": "کفش‌ها",
-      "PersischerSatz": "کفش‌ها راحت هستند."
-    },
-    {
-      "Begriff": "Hut",
-      "Artikel": "der",
-      "Satz": "Der Hut ist aus Stroh.",
-      "Persisch": "کلاه",
-      "PersischerSatz": "کلاه از کاه ساخته شده است."
-    },
-    {
-      "Begriff": "Brille",
-      "Artikel": "die",
-      "Satz": "Die Brille ist neu.",
-      "Persisch": "عینک",
-      "PersischerSatz": "عینک جدید است."
-    },
-    {
-      "Begriff": "Uhr",
-      "Artikel": "die",
-      "Satz": "Die Uhr zeigt fünf Uhr.",
-      "Persisch": "ساعت",
-      "PersischerSatz": "ساعت پنج را نشان می‌دهد."
-    },
-    {
-      "Begriff": "Handy",
-      "Artikel": "das",
-      "Satz": "Das Handy ist aufgeladen.",
-      "Persisch": "موبایل",
-      "PersischerSatz": "موبایل شارژ شده است."
-    },
-    {
-      "Begriff": "Computer",
-      "Artikel": "der",
-      "Satz": "Der Computer ist schnell.",
-      "Persisch": "رایانه",
-      "PersischerSatz": "رایانه سریع است."
-    },
-    {
-      "Begriff": "Fernseher",
-      "Artikel": "der",
-      "Satz": "Der Fernseher hat ein großes Bild.",
-      "Persisch": "تلویزیون",
-      "PersischerSatz": "تلویزیون تصویر بزرگی دارد."
-    },
-    {
-      "Begriff": "Kamera",
-      "Artikel": "die",
-      "Satz": "Die Kamera macht klare Fotos.",
-      "Persisch": "دوربین",
-      "PersischerSatz": "دوربین عکس‌های واضحی می‌گیرد."
-    },
-    {
-      "Begriff": "Telefon",
-      "Artikel": "das",
-      "Satz": "Das Telefon klingelt.",
-      "Persisch": "تلفن",
-      "PersischerSatz": "تلفن زنگ می‌زند."
-    },
-    {
-      "Begriff": "Bleistift",
-      "Artikel": "der",
-      "Satz": "Der Bleistift ist spitz.",
-      "Persisch": "مداد",
-      "PersischerSatz": "مداد تیز است."
-    },
-    {
-      "Begriff": "Radiergummi",
-      "Artikel": "der",
-      "Satz": "Der Radiergummi ist weich.",
-      "Persisch": "پاک‌کن",
-      "PersischerSatz": "پاک‌کن نرم است."
-    },
-    {
-      "Begriff": "Heft",
-      "Artikel": "das",
-      "Satz": "Das Heft ist dick.",
-      "Persisch": "دفتر",
-      "PersischerSatz": "دفتر ضخیم است."
-    },
-    {
-      "Begriff": "Papier",
-      "Artikel": "das",
-      "Satz": "Das Papier ist weiß.",
-      "Persisch": "کاغذ",
-      "PersischerSatz": "کاغذ سفید است."
-    },
-    {
-      "Begriff": "Teller",
-      "Artikel": "der",
-      "Satz": "Der Teller ist leer.",
-      "Persisch": "بشقاب",
-      "PersischerSatz": "بشقاب خالی است."
-    },
-    {
-      "Begriff": "Gabel",
-      "Artikel": "die",
-      "Satz": "Die Gabel ist aus Metall.",
-      "Persisch": "چنگال",
-      "PersischerSatz": "چنگال از فلز ساخته شده است."
-    },
-    {
-      "Begriff": "Löffel",
-      "Artikel": "der",
-      "Satz": "Der Löffel liegt auf dem Tisch.",
-      "Persisch": "قاشق",
-      "PersischerSatz": "قاشق روی میز قرار دارد."
-    },
-    {
-      "Begriff": "Glas",
-      "Artikel": "das",
-      "Satz": "Das Glas ist voll.",
-      "Persisch": "لیوان",
-      "PersischerSatz": "لیوان پر است."
-    },
-    {
-      "Begriff": "Flasche",
-      "Artikel": "die",
-      "Satz": "Die Flasche ist aus Glas.",
-      "Persisch": "بطری",
-      "PersischerSatz": "بطری از شیشه است."
-    },
-    {
-      "Begriff": "Kissen",
-      "Artikel": "das",
-      "Satz": "Das Kissen ist weich.",
-      "Persisch": "بالش",
-      "PersischerSatz": "بالش نرم است."
-    },
-    {
-      "Begriff": "Decke",
-      "Artikel": "die",
-      "Satz": "Die Decke ist warm.",
-      "Persisch": "پتو",
-      "PersischerSatz": "پتو گرم است."
-    },
-    {
-      "Begriff": "Bett",
-      "Artikel": "das",
-      "Satz": "Das Bett ist bequem.",
-      "Persisch": "تخت خواب",
-      "PersischerSatz": "تخت خواب راحت است."
-    },
-    {
-      "Begriff": "Stuhl",
-      "Artikel": "der",
-      "Satz": "Der Stuhl ist aus Holz.",
-      "Persisch": "صندلی",
-      "PersischerSatz": "صندلی از چوب ساخته شده است."
-    },
-    {
-      "Begriff": "Mütze",
-      "Artikel": "die",
-      "Satz": "Die Mütze schützt vor der Kälte.",
-      "Persisch": "کلاه زمستانی",
-      "PersischerSatz": "کلاه زمستانی از سر در برابر سرما محافظت می‌کند."
-    },
-    {
-      "Begriff": "Sonne",
-      "Artikel": "die",
-      "Satz": "Die Sonne scheint heute.",
-      "Persisch": "خورشید",
-      "PersischerSatz": "خورشید امروز می‌درخشد."
-    },
-    {
-      "Begriff": "Regen",
-      "Artikel": "der",
-      "Satz": "Der Regen fällt den ganzen Tag.",
-      "Persisch": "باران",
-      "PersischerSatz": "باران تمام روز می‌بارد."
-    },
-    {
-      "Begriff": "Schnee",
-      "Artikel": "der",
-      "Satz": "Der Schnee bedeckt die Straßen.",
-      "Persisch": "برف",
-      "PersischerSatz": "برف خیابان‌ها را پوشانده است."
-    },
-    {
-      "Begriff": "Wolke",
-      "Artikel": "die",
-      "Satz": "Die Wolke ist grau.",
-      "Persisch": "ابر",
-      "PersischerSatz": "ابر خاکستری است."
-    },
-    {
-      "Begriff": "Mond",
-      "Artikel": "der",
-      "Satz": "Der Mond scheint hell.",
-      "Persisch": "ماه",
-      "PersischerSatz": "ماه روشن می‌درخشد."
-    },
-    {
-      "Begriff": "Stern",
-      "Artikel": "der",
-      "Satz": "Der Stern funkelt in der Nacht.",
-      "Persisch": "ستاره",
-      "PersischerSatz": "ستاره در شب می‌درخشد."
-    },
-    {
-      "Begriff": "Wind",
-      "Artikel": "der",
-      "Satz": "Der Wind weht stark.",
-      "Persisch": "باد",
-      "PersischerSatz": "باد به شدت می‌وزد."
-    },
-    {
-      "Begriff": "Feuer",
-      "Artikel": "das",
-      "Satz": "Das Feuer brennt hell.",
-      "Persisch": "آتش",
-      "PersischerSatz": "آتش روشن می‌سوزد."
-    },
-    {
-      "Begriff": "Erde",
-      "Artikel": "die",
-      "Satz": "Die Erde ist unser Planet.",
-      "Persisch": "زمین",
-      "PersischerSatz": "زمین سیاره ماست."
-    },
-    {
-      "Begriff": "Luft",
-      "Artikel": "die",
-      "Satz": "Die Luft ist frisch.",
-      "Persisch": "هوا",
-      "PersischerSatz": "هوا تازه است."
-    },
-    {
-      "Begriff": "Meer",
-      "Artikel": "das",
-      "Satz": "Das Meer ist blau.",
-      "Persisch": "دریا",
-      "PersischerSatz": "دریا آبی است."
-    },
-    {
-      "Begriff": "Berg",
-      "Artikel": "der",
-      "Satz": "Der Berg ist hoch.",
-      "Persisch": "کوه",
-      "PersischerSatz": "کوه بلند است."
-    },
-    {
-      "Begriff": "Tal",
-      "Artikel": "das",
-      "Satz": "Das Tal ist weit und grün.",
-      "Persisch": "دره",
-      "PersischerSatz": "دره وسیع و سبز است."
-    },
-    {
-      "Begriff": "Fluss",
-      "Artikel": "der",
-      "Satz": "Der Fluss fließt schnell.",
-      "Persisch": "رودخانه",
-      "PersischerSatz": "رودخانه به سرعت جریان دارد."
-    },
-    {
-      "Begriff": "See",
-      "Artikel": "der",
-      "Satz": "Der See ist ruhig.",
-      "Persisch": "دریاچه",
-      "PersischerSatz": "دریاچه آرام است."
-    },
-    {
-      "Begriff": "Insel",
-      "Artikel": "die",
-      "Satz": "Die Insel liegt im Ozean.",
-      "Persisch": "جزیره",
-      "PersischerSatz": "جزیره در اقیانوس واقع شده است."
-    },
-    {
-      "Begriff": "Stuhl",
-      "Artikel": "der",
-      "Satz": "Der Stuhl ist aus Holz.",
-      "Persisch": "صندلی",
-      "PersischerSatz": "صندلی از چوب ساخته شده است."
-    },
-    {
-      "Begriff": "Licht",
-      "Artikel": "das",
-      "Satz": "Das Licht ist hell.",
-      "Persisch": "نور",
-      "PersischerSatz": "نور روشن است."
-    },
-    {
-      "Begriff": "Schatten",
-      "Artikel": "der",
-      "Satz": "Der Schatten ist kühl.",
-      "Persisch": "سایه",
-      "PersischerSatz": "سایه خنک است."
-    },
-    {
-      "Begriff": "Feuerwehr",
-      "Artikel": "die",
-      "Satz": "Die Feuerwehr kommt schnell.",
-      "Persisch": "آتش‌نشانی",
-      "PersischerSatz": "آتش‌نشانی سریع می‌آید."
-    },
-    {
-      "Begriff": "Polizei",
-      "Artikel": "die",
-      "Satz": "Die Polizei sorgt für Sicherheit.",
-      "Persisch": "پلیس",
-      "PersischerSatz": "پلیس امنیت را تامین می‌کند."
-    },
-    {
-      "Begriff": "Krankenhaus",
-      "Artikel": "das",
-      "Satz": "Das Krankenhaus ist groß.",
-      "Persisch": "بیمارستان",
-      "PersischerSatz": "بیمارستان بزرگ است."
-    },
-    {
-      "Begriff": "Apotheke",
-      "Artikel": "die",
-      "Satz": "Die Apotheke verkauft Medikamente.",
-      "Persisch": "داروخانه",
-      "PersischerSatz": "داروخانه دارو می‌فروشد."
-    },
-    {
-      "Begriff": "Restaurant",
-      "Artikel": "das",
-      "Satz": "Das Restaurant hat gute Bewertungen.",
-      "Persisch": "رستوران",
-      "PersischerSatz": "رستوران نقدهای خوبی دارد."
-    },
-    {
-      "Begriff": "Café",
-      "Artikel": "das",
-      "Satz": "Das Café ist gemütlich.",
-      "Persisch": "کافه",
-      "PersischerSatz": "کافه دنج است."
-    },
-    {
-      "Begriff": "Bibliothek",
-      "Artikel": "die",
-      "Satz": "Die Bibliothek hat viele Bücher.",
-      "Persisch": "کتابخانه",
-      "PersischerSatz": "کتابخانه کتاب‌های زیادی دارد."
-    },
-    {
-      "Begriff": "Kino",
-      "Artikel": "das",
-      "Satz": "Das Kino zeigt einen neuen Film.",
-      "Persisch": "سینما",
-      "PersischerSatz": "سینما فیلم جدیدی را نمایش می‌دهد."
-    },
-    {
-      "Begriff": "Theater",
-      "Artikel": "das",
-      "Satz": "Das Theater hat eine neue Aufführung.",
-      "Persisch": "تئاتر",
-      "PersischerSatz": "تئاتر نمایش جدیدی دارد."
-    },
-    {
-      "Begriff": "Museum",
-      "Artikel": "das",
-      "Satz": "Das Museum hat interessante Ausstellungen.",
-      "Persisch": "موزه",
-      "PersischerSatz": "موزه نمایشگاه‌های جالبی دارد."
-    },
-    {
-      "Begriff": "Zoo",
-      "Artikel": "der",
-      "Satz": "Der Zoo ist ein beliebtes Ausflugsziel.",
-      "Persisch": "باغ وحش",
-      "PersischerSatz": "باغ وحش مقصد تفریحی محبوبی است."
-    },
-    {
-      "Begriff": "Park",
-      "Artikel": "der",
-      "Satz": "Der Park ist ideal für einen Spaziergang.",
-      "Persisch": "پارک",
-      "PersischerSatz": "پارک برای پیاده‌روی ایده‌آل است."
-    },
-    {
-      "Begriff": "Markt",
-      "Artikel": "der",
-      "Satz": "Der Markt ist am Samstag besonders voll.",
-      "Persisch": "بازار",
-      "PersischerSatz": "بازار در روز شنبه به‌ویژه شلوغ است."
-    },
-    {
-      "Begriff": "Hafen",
-      "Artikel": "der",
-      "Satz": "Der Hafen ist für Schiffe geöffnet.",
-      "Persisch": "بندر",
-      "PersischerSatz": "بندر برای کشتی‌ها باز است."
-    },
-    {
-      "Begriff": "Bank",
-      "Artikel": "die",
-      "Satz": "Die Bank bietet viele Dienstleistungen an.",
-      "Persisch": "بانک",
-      "PersischerSatz": "بانک خدمات زیادی ارائه می‌دهد."
-    },
-    {
-      "Begriff": "Post",
-      "Artikel": "die",
-      "Satz": "Die Post ist gleich um die Ecke.",
-      "Persisch": "پست",
-      "PersischerSatz": "پست درست در دوربر است."
-    },
-    {
-      "Begriff": "Hotel",
-      "Artikel": "das",
-      "Satz": "Das Hotel bietet komfortable Zimmer.",
-      "Persisch": "هتل",
-      "PersischerSatz": "هتل اتاق‌های راحتی ارائه می‌دهد."
-    },
-    {
-      "Begriff": "Flughafen",
-      "Artikel": "der",
-      "Satz": "Der Flughafen liegt außerhalb der Stadt.",
-      "Persisch": "فرودگاه",
-      "PersischerSatz": "فرودگاه در خارج از شهر واقع شده است."
-    },
-    {
-      "Begriff": "Fahrstuhl",
-      "Artikel": "der",
-      "Satz": "Der Fahrstuhl ist außer Betrieb.",
-      "Persisch": "آسانسور",
-      "PersischerSatz": "آسانسور خارج از سرویس است."
-    },
-    {
-      "Begriff": "Treppenhaus",
-      "Artikel": "das",
-      "Satz": "Das Treppenhaus ist gut beleuchtet.",
-      "Persisch": "پله‌برجسته",
-      "PersischerSatz": "پله‌برجسته خوب روشن شده است."
-    },
-    {
-      "Begriff": "Zimmer",
-      "Artikel": "das",
-      "Satz": "Das Zimmer hat einen schönen Ausblick.",
-      "Persisch": "اتاق",
-      "PersischerSatz": "اتاق چشم‌انداز زیبایی دارد."
-    },
-    {
-      "Begriff": "Gästezimmer",
-      "Artikel": "das",
-      "Satz": "Das Gästezimmer ist komfortabel eingerichtet.",
-      "Persisch": "اتاق مهمان",
-      "PersischerSatz": "اتاق مهمان به‌خوبی مبله شده است."
-    },
-    {
-      "Begriff": "Balkon",
-      "Artikel": "der",
-      "Satz": "Der Balkon bietet einen tollen Ausblick.",
-      "Persisch": "بالکن",
-      "PersischerSatz": "بالکن نمای فوق‌العاده‌ای دارد."
-    },
-    {
-      "Begriff": "Terrasse",
-      "Artikel": "die",
-      "Satz": "Die Terrasse ist ideal für das Frühstück.",
-      "Persisch": "پاسیو",
-      "PersischerSatz": "پاسیو برای صبحانه ایده‌آل است."
-    },
-    {
-      "Begriff": "Keller",
-      "Artikel": "der",
-      "Satz": "Der Keller ist kühl und trocken.",
-      "Persisch": "زیرزمین",
-      "PersischerSatz": "زیرزمین خنک و خشک است."
-    },
-    {
-      "Begriff": "Dach",
-      "Artikel": "das",
-      "Satz": "Das Dach ist neu gedeckt.",
-      "Persisch": "سقف",
-      "PersischerSatz": "سقف تازه پوشانده شده است."
-    },
-    {
-      "Begriff": "Wand",
-      "Artikel": "die",
-      "Satz": "Die Wand ist frisch gestrichen.",
-      "Persisch": "دیوار",
-      "PersischerSatz": "دیوار تازه رنگ شده است."
-    },
-    {
-      "Begriff": "Boden",
-      "Artikel": "der",
-      "Satz": "Der Boden ist aus Holz.",
-      "Persisch": "کف",
-      "PersischerSatz": "کف از چوب ساخته شده است."
-    },
-    {
-      "Begriff": "Teppich",
-      "Artikel": "der",
-      "Satz": "Der Teppich ist bunt und weich.",
-      "Persisch": "فرش",
-      "PersischerSatz": "فرش رنگارنگ و نرم است."
-    },
-    {
-      "Begriff": "Vorhang",
-      "Artikel": "der",
-      "Satz": "Der Vorhang ist aus Samt.",
-      "Persisch": "پرده",
-      "PersischerSatz": "پرده از مخمل است."
-    },
-    {
-      "Begriff": "Lampe",
-      "Artikel": "die",
-      "Satz": "Die Lampe ist an.",
-      "Persisch": "لامپ",
-      "PersischerSatz": "لامپ روشن است."
-    }
-  ]
+    "Woerterbuch": [
+        {
+            "Begriff": "Haus",
+            "Artikel": "das",
+            "Satz": "Das Haus ist groß und hat einen schönen Garten.",
+            "Persisch": "خانه",
+            "PersischerSatz": "خانه بزرگ است و یک باغ زیبا دارد."
+        },
+        {
+            "Begriff": "Baum",
+            "Artikel": "der",
+            "Satz": "Der Baum im Park ist sehr alt.",
+            "Persisch": "درخت",
+            "PersischerSatz": "درخت در پارک خیلی قدیمی است."
+        },
+        {
+            "Begriff": "Auto",
+            "Artikel": "das",
+            "Satz": "Das Auto ist neu und sehr schnell.",
+            "Persisch": "اتومبیل",
+            "PersischerSatz": "اتومبیل جدید و بسیار سریع است."
+        },
+        {
+            "Begriff": "Schule",
+            "Artikel": "die",
+            "Satz": "Die Schule beginnt um acht Uhr morgens.",
+            "Persisch": "مدرسه",
+            "PersischerSatz": "مدرسه ساعت هشت صبح شروع می‌شود."
+        },
+        {
+            "Begriff": "Hund",
+            "Artikel": "der",
+            "Satz": "Der Hund bellt laut im Garten.",
+            "Persisch": "سگ",
+            "PersischerSatz": "سگ در حیاط به‌طور بلند پارس می‌کند."
+        },
+        {
+            "Begriff": "Apfel",
+            "Artikel": "der",
+            "Satz": "Der Apfel schmeckt heute besonders süß.",
+            "Persisch": "سیب",
+            "PersischerSatz": "سیب امروز به‌خصوص شیرین است."
+        },
+        {
+            "Begriff": "Buch",
+            "Artikel": "das",
+            "Satz": "Das Buch auf dem Tisch ist sehr interessant.",
+            "Persisch": "کتاب",
+            "PersischerSatz": "کتاب روی میز بسیار جالب است."
+        },
+        {
+            "Begriff": "Stadt",
+            "Artikel": "die",
+            "Satz": "Die Stadt ist bekannt für ihre historischen Gebäude.",
+            "Persisch": "شهر",
+            "PersischerSatz": "شهر به خاطر ساختمان‌های تاریخی‌اش معروف است."
+        },
+        {
+            "Begriff": "Fahrrad",
+            "Artikel": "das",
+            "Satz": "Das Fahrrad steht vor dem Haus.",
+            "Persisch": "دوچرخه",
+            "PersischerSatz": "دوچرخه در جلوی خانه قرار دارد."
+        },
+        {
+            "Begriff": "Katze",
+            "Artikel": "die",
+            "Satz": "Die Katze schläft auf dem Sofa.",
+            "Persisch": "گربه",
+            "PersischerSatz": "گربه روی مبل خوابیده است."
+        },
+        {
+            "Begriff": "Tisch",
+            "Artikel": "der",
+            "Satz": "Der Tisch ist aus Holz.",
+            "Persisch": "میز",
+            "PersischerSatz": "میز از چوب ساخته شده است."
+        },
+        {
+            "Begriff": "Stuhl",
+            "Artikel": "der",
+            "Satz": "Der Stuhl ist bequem.",
+            "Persisch": "صندلی",
+            "PersischerSatz": "صندلی راحت است."
+        },
+        {
+            "Begriff": "Fenster",
+            "Artikel": "das",
+            "Satz": "Das Fenster lässt viel Licht herein.",
+            "Persisch": "پنجره",
+            "PersischerSatz": "پنجره نور زیادی را به داخل می‌آورد."
+        },
+        {
+            "Begriff": "Tür",
+            "Artikel": "die",
+            "Satz": "Die Tür ist rot gestrichen.",
+            "Persisch": "در",
+            "PersischerSatz": "در رنگ قرمز دارد."
+        },
+        {
+            "Begriff": "Straße",
+            "Artikel": "die",
+            "Satz": "Die Straße ist sehr laut.",
+            "Persisch": "خیابان",
+            "PersischerSatz": "خیابان خیلی شلوغ است."
+        },
+        {
+            "Begriff": "Flughafen",
+            "Artikel": "der",
+            "Satz": "Der Flughafen ist weit von hier entfernt.",
+            "Persisch": "فرودگاه",
+            "PersischerSatz": "فرودگاه از اینجا دور است."
+        },
+        {
+            "Begriff": "Bahnhof",
+            "Artikel": "der",
+            "Satz": "Der Bahnhof liegt im Stadtzentrum.",
+            "Persisch": "ایستگاه قطار",
+            "PersischerSatz": "ایستگاه قطار در مرکز شهر واقع شده است."
+        },
+        {
+            "Begriff": "Küche",
+            "Artikel": "die",
+            "Satz": "Die Küche ist sehr modern.",
+            "Persisch": "آشپزخانه",
+            "PersischerSatz": "آشپزخانه بسیار مدرن است."
+        },
+        {
+            "Begriff": "Badezimmer",
+            "Artikel": "das",
+            "Satz": "Das Badezimmer ist frisch renoviert.",
+            "Persisch": "حمام",
+            "PersischerSatz": "حمام تازه بازسازی شده است."
+        },
+        {
+            "Begriff": "Garten",
+            "Artikel": "der",
+            "Satz": "Der Garten hat viele bunte Blumen.",
+            "Persisch": "باغ",
+            "PersischerSatz": "باغ دارای گل‌های رنگارنگ زیادی است."
+        },
+        {
+            "Begriff": "Wasser",
+            "Artikel": "das",
+            "Satz": "Das Wasser ist kalt.",
+            "Persisch": "آب",
+            "PersischerSatz": "آب سرد است."
+        },
+        {
+            "Begriff": "Brot",
+            "Artikel": "das",
+            "Satz": "Das Brot ist frisch gebacken.",
+            "Persisch": "نان",
+            "PersischerSatz": "نان تازه پخته شده است."
+        },
+        {
+            "Begriff": "Milch",
+            "Artikel": "die",
+            "Satz": "Die Milch ist im Kühlschrank.",
+            "Persisch": "شیر",
+            "PersischerSatz": "شیر در یخچال است."
+        },
+        {
+            "Begriff": "Kaffee",
+            "Artikel": "der",
+            "Satz": "Der Kaffee ist stark.",
+            "Persisch": "قهوه",
+            "PersischerSatz": "قهوه قوی است."
+        },
+        {
+            "Begriff": "Tee",
+            "Artikel": "der",
+            "Satz": "Der Tee ist heiß.",
+            "Persisch": "چای",
+            "PersischerSatz": "چای داغ است."
+        },
+        {
+            "Begriff": "Kuchen",
+            "Artikel": "der",
+            "Satz": "Der Kuchen ist süß.",
+            "Persisch": "کیک",
+            "PersischerSatz": "کیک شیرین است."
+        },
+        {
+            "Begriff": "Fisch",
+            "Artikel": "der",
+            "Satz": "Der Fisch schwimmt im Wasser.",
+            "Persisch": "ماهی",
+            "PersischerSatz": "ماهی در آب شنا می‌کند."
+        },
+        {
+            "Begriff": "Fleisch",
+            "Artikel": "das",
+            "Satz": "Das Fleisch ist zart.",
+            "Persisch": "گوشت",
+            "PersischerSatz": "گوشت نرم است."
+        },
+        {
+            "Begriff": "Gemüse",
+            "Artikel": "das",
+            "Satz": "Das Gemüse ist frisch.",
+            "Persisch": "سبزیجات",
+            "PersischerSatz": "سبزیجات تازه هستند."
+        },
+        {
+            "Begriff": "Obst",
+            "Artikel": "das",
+            "Satz": "Das Obst ist gesund.",
+            "Persisch": "میوه‌ها",
+            "PersischerSatz": "میوه‌ها سالم هستند."
+        },
+        {
+            "Begriff": "Kleid",
+            "Artikel": "das",
+            "Satz": "Das Kleid ist elegant.",
+            "Persisch": "لباس",
+            "PersischerSatz": "لباس شیک است."
+        },
+        {
+            "Begriff": "Hemd",
+            "Artikel": "das",
+            "Satz": "Das Hemd ist blau.",
+            "Persisch": "پیراهن",
+            "PersischerSatz": "پیراهن آبی است."
+        },
+        {
+            "Begriff": "Jacke",
+            "Artikel": "die",
+            "Satz": "Die Jacke hält warm.",
+            "Persisch": "کت",
+            "PersischerSatz": "کت گرم نگه می‌دارد."
+        },
+        {
+            "Begriff": "Schuhe",
+            "Artikel": "die",
+            "Satz": "Die Schuhe sind bequem.",
+            "Persisch": "کفش‌ها",
+            "PersischerSatz": "کفش‌ها راحت هستند."
+        },
+        {
+            "Begriff": "Hut",
+            "Artikel": "der",
+            "Satz": "Der Hut ist aus Stroh.",
+            "Persisch": "کلاه",
+            "PersischerSatz": "کلاه از کاه ساخته شده است."
+        },
+        {
+            "Begriff": "Brille",
+            "Artikel": "die",
+            "Satz": "Die Brille ist neu.",
+            "Persisch": "عینک",
+            "PersischerSatz": "عینک جدید است."
+        },
+        {
+            "Begriff": "Uhr",
+            "Artikel": "die",
+            "Satz": "Die Uhr zeigt fünf Uhr.",
+            "Persisch": "ساعت",
+            "PersischerSatz": "ساعت پنج را نشان می‌دهد."
+        },
+        {
+            "Begriff": "Handy",
+            "Artikel": "das",
+            "Satz": "Das Handy ist aufgeladen.",
+            "Persisch": "موبایل",
+            "PersischerSatz": "موبایل شارژ شده است."
+        },
+        {
+            "Begriff": "Computer",
+            "Artikel": "der",
+            "Satz": "Der Computer ist schnell.",
+            "Persisch": "رایانه",
+            "PersischerSatz": "رایانه سریع است."
+        },
+        {
+            "Begriff": "Fernseher",
+            "Artikel": "der",
+            "Satz": "Der Fernseher hat ein großes Bild.",
+            "Persisch": "تلویزیون",
+            "PersischerSatz": "تلویزیون تصویر بزرگی دارد."
+        },
+        {
+            "Begriff": "Kamera",
+            "Artikel": "die",
+            "Satz": "Die Kamera macht klare Fotos.",
+            "Persisch": "دوربین",
+            "PersischerSatz": "دوربین عکس‌های واضحی می‌گیرد."
+        },
+        {
+            "Begriff": "Telefon",
+            "Artikel": "das",
+            "Satz": "Das Telefon klingelt.",
+            "Persisch": "تلفن",
+            "PersischerSatz": "تلفن زنگ می‌زند."
+        },
+        {
+            "Begriff": "Bleistift",
+            "Artikel": "der",
+            "Satz": "Der Bleistift ist spitz.",
+            "Persisch": "مداد",
+            "PersischerSatz": "مداد تیز است."
+        },
+        {
+            "Begriff": "Radiergummi",
+            "Artikel": "der",
+            "Satz": "Der Radiergummi ist weich.",
+            "Persisch": "پاک‌کن",
+            "PersischerSatz": "پاک‌کن نرم است."
+        },
+        {
+            "Begriff": "Heft",
+            "Artikel": "das",
+            "Satz": "Das Heft ist dick.",
+            "Persisch": "دفتر",
+            "PersischerSatz": "دفتر ضخیم است."
+        },
+        {
+            "Begriff": "Papier",
+            "Artikel": "das",
+            "Satz": "Das Papier ist weiß.",
+            "Persisch": "کاغذ",
+            "PersischerSatz": "کاغذ سفید است."
+        },
+        {
+            "Begriff": "Teller",
+            "Artikel": "der",
+            "Satz": "Der Teller ist leer.",
+            "Persisch": "بشقاب",
+            "PersischerSatz": "بشقاب خالی است."
+        },
+        {
+            "Begriff": "Gabel",
+            "Artikel": "die",
+            "Satz": "Die Gabel ist aus Metall.",
+            "Persisch": "چنگال",
+            "PersischerSatz": "چنگال از فلز ساخته شده است."
+        },
+        {
+            "Begriff": "Löffel",
+            "Artikel": "der",
+            "Satz": "Der Löffel liegt auf dem Tisch.",
+            "Persisch": "قاشق",
+            "PersischerSatz": "قاشق روی میز قرار دارد."
+        },
+        {
+            "Begriff": "Glas",
+            "Artikel": "das",
+            "Satz": "Das Glas ist voll.",
+            "Persisch": "لیوان",
+            "PersischerSatz": "لیوان پر است."
+        },
+        {
+            "Begriff": "Flasche",
+            "Artikel": "die",
+            "Satz": "Die Flasche ist aus Glas.",
+            "Persisch": "بطری",
+            "PersischerSatz": "بطری از شیشه است."
+        },
+        {
+            "Begriff": "Kissen",
+            "Artikel": "das",
+            "Satz": "Das Kissen ist weich.",
+            "Persisch": "بالش",
+            "PersischerSatz": "بالش نرم است."
+        },
+        {
+            "Begriff": "Decke",
+            "Artikel": "die",
+            "Satz": "Die Decke ist warm.",
+            "Persisch": "پتو",
+            "PersischerSatz": "پتو گرم است."
+        },
+        {
+            "Begriff": "Bett",
+            "Artikel": "das",
+            "Satz": "Das Bett ist bequem.",
+            "Persisch": "تخت خواب",
+            "PersischerSatz": "تخت خواب راحت است."
+        },
+        {
+            "Begriff": "Stuhl",
+            "Artikel": "der",
+            "Satz": "Der Stuhl ist aus Holz.",
+            "Persisch": "صندلی",
+            "PersischerSatz": "صندلی از چوب ساخته شده است."
+        },
+        {
+            "Begriff": "Mütze",
+            "Artikel": "die",
+            "Satz": "Die Mütze schützt vor der Kälte.",
+            "Persisch": "کلاه زمستانی",
+            "PersischerSatz": "کلاه زمستانی از سر در برابر سرما محافظت می‌کند."
+        },
+        {
+            "Begriff": "Sonne",
+            "Artikel": "die",
+            "Satz": "Die Sonne scheint heute.",
+            "Persisch": "خورشید",
+            "PersischerSatz": "خورشید امروز می‌درخشد."
+        },
+        {
+            "Begriff": "Regen",
+            "Artikel": "der",
+            "Satz": "Der Regen fällt den ganzen Tag.",
+            "Persisch": "باران",
+            "PersischerSatz": "باران تمام روز می‌بارد."
+        },
+        {
+            "Begriff": "Schnee",
+            "Artikel": "der",
+            "Satz": "Der Schnee bedeckt die Straßen.",
+            "Persisch": "برف",
+            "PersischerSatz": "برف خیابان‌ها را پوشانده است."
+        },
+        {
+            "Begriff": "Wolke",
+            "Artikel": "die",
+            "Satz": "Die Wolke ist grau.",
+            "Persisch": "ابر",
+            "PersischerSatz": "ابر خاکستری است."
+        },
+        {
+            "Begriff": "Mond",
+            "Artikel": "der",
+            "Satz": "Der Mond scheint hell.",
+            "Persisch": "ماه",
+            "PersischerSatz": "ماه روشن می‌درخشد."
+        },
+        {
+            "Begriff": "Stern",
+            "Artikel": "der",
+            "Satz": "Der Stern funkelt in der Nacht.",
+            "Persisch": "ستاره",
+            "PersischerSatz": "ستاره در شب می‌درخشد."
+        },
+        {
+            "Begriff": "Wind",
+            "Artikel": "der",
+            "Satz": "Der Wind weht stark.",
+            "Persisch": "باد",
+            "PersischerSatz": "باد به شدت می‌وزد."
+        },
+        {
+            "Begriff": "Feuer",
+            "Artikel": "das",
+            "Satz": "Das Feuer brennt hell.",
+            "Persisch": "آتش",
+            "PersischerSatz": "آتش روشن می‌سوزد."
+        },
+        {
+            "Begriff": "Erde",
+            "Artikel": "die",
+            "Satz": "Die Erde ist unser Planet.",
+            "Persisch": "زمین",
+            "PersischerSatz": "زمین سیاره ماست."
+        },
+        {
+            "Begriff": "Luft",
+            "Artikel": "die",
+            "Satz": "Die Luft ist frisch.",
+            "Persisch": "هوا",
+            "PersischerSatz": "هوا تازه است."
+        },
+        {
+            "Begriff": "Meer",
+            "Artikel": "das",
+            "Satz": "Das Meer ist blau.",
+            "Persisch": "دریا",
+            "PersischerSatz": "دریا آبی است."
+        },
+        {
+            "Begriff": "Berg",
+            "Artikel": "der",
+            "Satz": "Der Berg ist hoch.",
+            "Persisch": "کوه",
+            "PersischerSatz": "کوه بلند است."
+        },
+        {
+            "Begriff": "Tal",
+            "Artikel": "das",
+            "Satz": "Das Tal ist weit und grün.",
+            "Persisch": "دره",
+            "PersischerSatz": "دره وسیع و سبز است."
+        },
+        {
+            "Begriff": "Fluss",
+            "Artikel": "der",
+            "Satz": "Der Fluss fließt schnell.",
+            "Persisch": "رودخانه",
+            "PersischerSatz": "رودخانه به سرعت جریان دارد."
+        },
+        {
+            "Begriff": "See",
+            "Artikel": "der",
+            "Satz": "Der See ist ruhig.",
+            "Persisch": "دریاچه",
+            "PersischerSatz": "دریاچه آرام است."
+        },
+        {
+            "Begriff": "Insel",
+            "Artikel": "die",
+            "Satz": "Die Insel liegt im Ozean.",
+            "Persisch": "جزیره",
+            "PersischerSatz": "جزیره در اقیانوس واقع شده است."
+        },
+        {
+            "Begriff": "Stuhl",
+            "Artikel": "der",
+            "Satz": "Der Stuhl ist aus Holz.",
+            "Persisch": "صندلی",
+            "PersischerSatz": "صندلی از چوب ساخته شده است."
+        },
+        {
+            "Begriff": "Licht",
+            "Artikel": "das",
+            "Satz": "Das Licht ist hell.",
+            "Persisch": "نور",
+            "PersischerSatz": "نور روشن است."
+        },
+        {
+            "Begriff": "Schatten",
+            "Artikel": "der",
+            "Satz": "Der Schatten ist kühl.",
+            "Persisch": "سایه",
+            "PersischerSatz": "سایه خنک است."
+        },
+        {
+            "Begriff": "Feuerwehr",
+            "Artikel": "die",
+            "Satz": "Die Feuerwehr kommt schnell.",
+            "Persisch": "آتش‌نشانی",
+            "PersischerSatz": "آتش‌نشانی سریع می‌آید."
+        },
+        {
+            "Begriff": "Polizei",
+            "Artikel": "die",
+            "Satz": "Die Polizei sorgt für Sicherheit.",
+            "Persisch": "پلیس",
+            "PersischerSatz": "پلیس امنیت را تامین می‌کند."
+        },
+        {
+            "Begriff": "Krankenhaus",
+            "Artikel": "das",
+            "Satz": "Das Krankenhaus ist groß.",
+            "Persisch": "بیمارستان",
+            "PersischerSatz": "بیمارستان بزرگ است."
+        },
+        {
+            "Begriff": "Apotheke",
+            "Artikel": "die",
+            "Satz": "Die Apotheke verkauft Medikamente.",
+            "Persisch": "داروخانه",
+            "PersischerSatz": "داروخانه دارو می‌فروشد."
+        },
+        {
+            "Begriff": "Restaurant",
+            "Artikel": "das",
+            "Satz": "Das Restaurant hat gute Bewertungen.",
+            "Persisch": "رستوران",
+            "PersischerSatz": "رستوران نقدهای خوبی دارد."
+        },
+        {
+            "Begriff": "Café",
+            "Artikel": "das",
+            "Satz": "Das Café ist gemütlich.",
+            "Persisch": "کافه",
+            "PersischerSatz": "کافه دنج است."
+        },
+        {
+            "Begriff": "Bibliothek",
+            "Artikel": "die",
+            "Satz": "Die Bibliothek hat viele Bücher.",
+            "Persisch": "کتابخانه",
+            "PersischerSatz": "کتابخانه کتاب‌های زیادی دارد."
+        },
+        {
+            "Begriff": "Kino",
+            "Artikel": "das",
+            "Satz": "Das Kino zeigt einen neuen Film.",
+            "Persisch": "سینما",
+            "PersischerSatz": "سینما فیلم جدیدی را نمایش می‌دهد."
+        },
+        {
+            "Begriff": "Theater",
+            "Artikel": "das",
+            "Satz": "Das Theater hat eine neue Aufführung.",
+            "Persisch": "تئاتر",
+            "PersischerSatz": "تئاتر نمایش جدیدی دارد."
+        },
+        {
+            "Begriff": "Museum",
+            "Artikel": "das",
+            "Satz": "Das Museum hat interessante Ausstellungen.",
+            "Persisch": "موزه",
+            "PersischerSatz": "موزه نمایشگاه‌های جالبی دارد."
+        },
+        {
+            "Begriff": "Zoo",
+            "Artikel": "der",
+            "Satz": "Der Zoo ist ein beliebtes Ausflugsziel.",
+            "Persisch": "باغ وحش",
+            "PersischerSatz": "باغ وحش مقصد تفریحی محبوبی است."
+        },
+        {
+            "Begriff": "Park",
+            "Artikel": "der",
+            "Satz": "Der Park ist ideal für einen Spaziergang.",
+            "Persisch": "پارک",
+            "PersischerSatz": "پارک برای پیاده‌روی ایده‌آل است."
+        },
+        {
+            "Begriff": "Markt",
+            "Artikel": "der",
+            "Satz": "Der Markt ist am Samstag besonders voll.",
+            "Persisch": "بازار",
+            "PersischerSatz": "بازار در روز شنبه به‌ویژه شلوغ است."
+        },
+        {
+            "Begriff": "Hafen",
+            "Artikel": "der",
+            "Satz": "Der Hafen ist für Schiffe geöffnet.",
+            "Persisch": "بندر",
+            "PersischerSatz": "بندر برای کشتی‌ها باز است."
+        },
+        {
+            "Begriff": "Bank",
+            "Artikel": "die",
+            "Satz": "Die Bank bietet viele Dienstleistungen an.",
+            "Persisch": "بانک",
+            "PersischerSatz": "بانک خدمات زیادی ارائه می‌دهد."
+        },
+        {
+            "Begriff": "Post",
+            "Artikel": "die",
+            "Satz": "Die Post ist gleich um die Ecke.",
+            "Persisch": "پست",
+            "PersischerSatz": "پست درست در دوربر است."
+        },
+        {
+            "Begriff": "Hotel",
+            "Artikel": "das",
+            "Satz": "Das Hotel bietet komfortable Zimmer.",
+            "Persisch": "هتل",
+            "PersischerSatz": "هتل اتاق‌های راحتی ارائه می‌دهد."
+        },
+        {
+            "Begriff": "Flughafen",
+            "Artikel": "der",
+            "Satz": "Der Flughafen liegt außerhalb der Stadt.",
+            "Persisch": "فرودگاه",
+            "PersischerSatz": "فرودگاه در خارج از شهر واقع شده است."
+        },
+        {
+            "Begriff": "Fahrstuhl",
+            "Artikel": "der",
+            "Satz": "Der Fahrstuhl ist außer Betrieb.",
+            "Persisch": "آسانسور",
+            "PersischerSatz": "آسانسور خارج از سرویس است."
+        },
+        {
+            "Begriff": "Treppenhaus",
+            "Artikel": "das",
+            "Satz": "Das Treppenhaus ist gut beleuchtet.",
+            "Persisch": "پله‌برجسته",
+            "PersischerSatz": "پله‌برجسته خوب روشن شده است."
+        },
+        {
+            "Begriff": "Zimmer",
+            "Artikel": "das",
+            "Satz": "Das Zimmer hat einen schönen Ausblick.",
+            "Persisch": "اتاق",
+            "PersischerSatz": "اتاق چشم‌انداز زیبایی دارد."
+        },
+        {
+            "Begriff": "Gästezimmer",
+            "Artikel": "das",
+            "Satz": "Das Gästezimmer ist komfortabel eingerichtet.",
+            "Persisch": "اتاق مهمان",
+            "PersischerSatz": "اتاق مهمان به‌خوبی مبله شده است."
+        },
+        {
+            "Begriff": "Balkon",
+            "Artikel": "der",
+            "Satz": "Der Balkon bietet einen tollen Ausblick.",
+            "Persisch": "بالکن",
+            "PersischerSatz": "بالکن نمای فوق‌العاده‌ای دارد."
+        },
+        {
+            "Begriff": "Terrasse",
+            "Artikel": "die",
+            "Satz": "Die Terrasse ist ideal für das Frühstück.",
+            "Persisch": "پاسیو",
+            "PersischerSatz": "پاسیو برای صبحانه ایده‌آل است."
+        },
+        {
+            "Begriff": "Keller",
+            "Artikel": "der",
+            "Satz": "Der Keller ist kühl und trocken.",
+            "Persisch": "زیرزمین",
+            "PersischerSatz": "زیرزمین خنک و خشک است."
+        },
+        {
+            "Begriff": "Dach",
+            "Artikel": "das",
+            "Satz": "Das Dach ist neu gedeckt.",
+            "Persisch": "سقف",
+            "PersischerSatz": "سقف تازه پوشانده شده است."
+        },
+        {
+            "Begriff": "Wand",
+            "Artikel": "die",
+            "Satz": "Die Wand ist frisch gestrichen.",
+            "Persisch": "دیوار",
+            "PersischerSatz": "دیوار تازه رنگ شده است."
+        },
+        {
+            "Begriff": "Boden",
+            "Artikel": "der",
+            "Satz": "Der Boden ist aus Holz.",
+            "Persisch": "کف",
+            "PersischerSatz": "کف از چوب ساخته شده است."
+        },
+        {
+            "Begriff": "Teppich",
+            "Artikel": "der",
+            "Satz": "Der Teppich ist bunt und weich.",
+            "Persisch": "فرش",
+            "PersischerSatz": "فرش رنگارنگ و نرم است."
+        },
+        {
+            "Begriff": "Vorhang",
+            "Artikel": "der",
+            "Satz": "Der Vorhang ist aus Samt.",
+            "Persisch": "پرده",
+            "PersischerSatz": "پرده از مخمل است."
+        },
+        {
+            "Begriff": "Lampe",
+            "Artikel": "die",
+            "Satz": "Die Lampe ist an.",
+            "Persisch": "لامپ",
+            "PersischerSatz": "لامپ روشن است."
+        },
+        {
+            "Begriff": "Messer",
+            "Artikel": "das",
+            "Satz": "Das Messer ist scharf.",
+            "Persisch": "چاقو",
+            "PersischerSatz": "چاقو تیز است."
+        },
+        {
+            "Begriff": "Radio",
+            "Artikel": "das",
+            "Satz": "Das Radio ist alt.",
+            "Persisch": "رادیو",
+            "PersischerSatz": "رایدو قدیمی است."
+        },
+        {
+            "Begriff": "Waage",
+            "Artikel": "die",
+            "Satz": "Die Waage kann wiegen",
+            "Persisch": "ترازو",
+            "PersischerSatz": "ترازو میتواند وزن بگیرد"
+        }
+    ]
 }

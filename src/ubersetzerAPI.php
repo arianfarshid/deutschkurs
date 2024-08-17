@@ -24,18 +24,23 @@ class uebersetzerAPI extends Page
 
         $data = array();
 
-        $json = json_decode(file_get_contents('woerter.json'), true);
-        if(is_array($json) && isset($json['Woerterbuch'])) {
-            foreach($json['Woerterbuch'] as $woerterbuch) {
-                if($woerterbuch['Begriff'] == $this->searched) {
-                    $data = array(
-                        'Persisch' => $woerterbuch['Persisch'],
-                        'Satz' => $woerterbuch['Satz'],
-                        'PersischerSatz' => $woerterbuch['PersischerSatz']
-                    );
-                    break;
-                }
+        try {
+            // Verwende PDO für vorbereitete Anweisung
+            $stmt = $this->_database->prepare('SELECT Persisch, Satz, PersischerSatz FROM Woerter WHERE Begriff = :search_value');
+            $stmt->bindValue(':search_value', $this->searched, PDO::PARAM_STR);
+            $stmt->execute();
+
+            // Ergebnisse verarbeiten
+            while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
+                $data = array(
+                    "Persisch" => $row["Persisch"],
+                    "Satz" => $row["Satz"],
+                    "PersischerSatz" => $row["PersischerSatz"]
+                );
             }
+            $stmt->closeCursor();
+        } catch (PDOException $e) {
+            echo "Fehler bei der Abfrage: " . $e->getMessage();
         }
 
 

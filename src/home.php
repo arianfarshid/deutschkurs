@@ -18,23 +18,28 @@ class home extends Page
 
     protected function getViewData(): array
     {
-        $result = array();
-        $json = file_get_contents('woerter.json');
-        $json_data = json_decode($json, true);
+        $data = array();
 
+        try {
+            $stmt = $this->_database->prepare('SELECT * FROM Woerter ORDER BY RANDOM() LIMIT 1');
+            $stmt->execute();
 
-        if (is_array($json_data) && isset($json_data['Woerterbuch'])) {
-            $random_key = array_rand($json_data['Woerterbuch']);
-            $random_entry = $json_data['Woerterbuch'][$random_key];
-
-            $result = array(
-                'Begriff' => $random_entry['Begriff'],
-                'Artikel' => $random_entry['Artikel'],
-                'Satz' => $random_entry['Satz']
-            );
+            // Ergebnisse verarbeiten
+            while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
+                $data = array(
+                    "Begriff" => $row["Begriff"],
+                    "Artikel" => $row["Artikel"],
+                    "Satz" => $row["Satz"],
+                    "PersischerSatz" => $row["PersischerSatz"],
+                    "Persisch" => $row["Persisch"]
+                );
+            }
+            $stmt->closeCursor();
+        } catch (PDOException $e) {
+            echo "Fehler bei der Abfrage: " . $e->getMessage();
         }
 
-        return $result;
+        return $data;
     }
 
 
@@ -84,7 +89,7 @@ class home extends Page
 
         echo <<< EOT
             <footer>
-                <p>&copy; Arian Farzad</p>
+                <p>&copy; Arian Farzad & Hana Farzad</p>
             </footer>
         EOT;
 
@@ -97,31 +102,56 @@ class home extends Page
         if(isset($_POST['begriffEingabe']) &&
             isset($_POST['persischEingabe']) &&
             isset($_POST['artikelEingabe'])){
-            $begriff = htmlspecialchars($_POST['begriffEingabe']);
-            $persisch = htmlspecialchars($_POST['persischEingabe']);
-            $artikel = htmlspecialchars($_POST['artikelEingabe']);
-            $satzEingabe = (isset($_POST['satzEingabe'])) ? htmlspecialchars($_POST['satzEingabe']) : '';
-            $persischerSatzEingabe = (isset($_POST['persischerSatzEingabe'])) ? htmlspecialchars($_POST['persischerSatzEingabe']) : '';
+            $begriff = $_POST['begriffEingabe'];
+            $persisch = $_POST['persischEingabe'];
+            $artikel = $_POST['artikelEingabe'];
+            $satzEingabe = (isset($_POST['satzEingabe'])) ? $_POST['satzEingabe'] : '';
+            $persischerSatzEingabe = (isset($_POST['persischerSatzEingabe'])) ? $_POST['persischerSatzEingabe'] : '';
 
 
-            $neuerEintrag = [
-                "Begriff" => $begriff,
-                "Artikel" => $artikel,
-                "Satz" => $satzEingabe,
-                "Persisch" => $persisch,
-                "PersischerSatz" => $persischerSatzEingabe
-            ];
+            $stmt = $this->_database->prepare(
+                'INSERT INTO Woerter(Begriff, Artikel, Satz, PersischerSatz, Persisch)
+                VALUES (:begriff, :artikel, :Satz, :persischerSatz, :persisch)'
+            );
 
-            $jsonDatei = 'woerter.json';
-            $jsonInhalt = file_get_contents($jsonDatei);
+            $stmt->bindValue(':begriff', $begriff, PDO::PARAM_STR);
+            $stmt->bindValue(':artikel', $artikel, PDO::PARAM_STR);
+            $stmt->bindValue(':Satz', $satzEingabe, PDO::PARAM_STR);
+            $stmt->bindValue(':persischerSatz', $persischerSatzEingabe, PDO::PARAM_STR);
+            $stmt->bindValue(':persisch', $persisch, PDO::PARAM_STR);
 
-            $woerterbuch = json_decode($jsonInhalt, true);
-            $woerterbuch['Woerterbuch'][] = $neuerEintrag;
-
-            $neuerJsonInhalt = json_encode($woerterbuch, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE);
-            file_put_contents($jsonDatei, $neuerJsonInhalt);
+            $stmt->execute();
 
             header("Location: home.php?id=uebersetzer");
+        }
+    }
+
+
+    private function checkCorrectArticle():void{
+        if(isset($_POST['artikelRadio']) && isset($_POST['begriffHidden'])){
+            $radio = $_POST['artikelRadio'];
+            $begriff = $_POST['begriffHidden'];
+
+            $data = array();
+            $stmt = $this->_database->prepare('SELECT Artikel FROM Woerter WHERE Begriff = :begriff');
+            $stmt->bindParam(':begriff', $begriff, PDO::PARAM_STR);
+            $stmt->execute();
+            while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
+                $data = array(
+                    "Artikel" => $row['Artikel']
+                );
+            }
+
+            $stmt->closeCursor();
+
+            if ($data['Artikel'] == $radio) {
+                $_SESSION['answer'] = "<p style='color: green'>Richtig, der Artikel von {$begriff} ist: {$data['Artikel']}</p>";
+            } else {
+                $_SESSION['answer'] = "<p style='color: red'>Leider Falsch, der Artikel von {$begriff} ist: {$data['Artikel']}</p>";
+            }
+
+
+            header("Location: home.php?id=".$this->index);
         }
     }
 
@@ -133,37 +163,8 @@ class home extends Page
             $this->index = $_GET['id'];
             echo "<input type='hidden' name='index' id='index' value='{$this->index}'>";
         }
-        if(isset($_POST['artikelRadio']) && isset($_POST['begriffHidden'])){
-            $radio = $_POST['artikelRadio'];
-            $begriff = $_POST['begriffHidden'];
 
-            $json_data = json_decode(file_get_contents('woerter.json'), true);
-            $data = array();
-            if (is_array($json_data) && isset($json_data['Woerterbuch'])) {
-                foreach ($json_data['Woerterbuch'] as $entry) {
-                    if ($entry['Begriff'] == $begriff) {
-                        $data = array(
-                            'Begriff' => $entry['Begriff'],
-                            'Artikel' => $entry['Artikel'],
-                            'Satz' => $entry['Satz']
-                        );
-                        break;
-                    }
-                }
-            }
-
-
-
-            if ($data['Artikel'] == $radio) {
-                $_SESSION['answer'] = "<p style='color: green'>Richtig, der Artikel von {$begriff} ist: {$data['Artikel']}</p>";
-            } else {
-                $_SESSION['answer'] = "<p style='color: red'>Leider Falsch, der Artikel von {$begriff} ist: {$data['Artikel']}</p>";
-            }
-
-
-            header("Location: home.php?id=".$this->index);
-        }
-
+        $this->checkCorrectArticle();
         $this->processAddWordData();
     }
 

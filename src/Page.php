@@ -2,10 +2,16 @@
 
 abstract class Page
 {
+    protected $_database;
     protected function __construct()
     {
         error_reporting(E_ALL);
-
+        try {
+            $this->_database = new PDO('sqlite:deutschkurs.db');
+            $this->_database->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        } catch (PDOException $e) {
+            echo "Verbindung fehlgeschlagen: " . $e->getMessage();
+        }
     }
 
     public function __destruct()

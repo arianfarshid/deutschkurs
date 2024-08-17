@@ -21,24 +21,30 @@ class sucheAPI extends Page
             $this->search_value = htmlspecialchars($_GET['word']);
         }
 
-        $result = array();
-        $json = file_get_contents('woerter.json');
-        $json_data = json_decode($json, true);
+        $data = array();
 
-        if (is_array($json_data) && isset($json_data['Woerterbuch'])) {
-            foreach ($json_data['Woerterbuch'] as $entry) {
-                if ($entry['Begriff'] == $this->search_value) {
-                    $result = array(
-                        'Begriff' => $entry['Begriff'],
-                        'Artikel' => $entry['Artikel'],
-                        'Satz' => $entry['Satz']
-                    );
-                    break;
-                }
+        try {
+            // Verwende PDO für vorbereitete Anweisung
+            $stmt = $this->_database->prepare('SELECT * FROM Woerter WHERE Begriff = :search_value');
+            $stmt->bindValue(':search_value', $this->search_value, PDO::PARAM_STR);
+            $stmt->execute();
+
+            // Ergebnisse verarbeiten
+            while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
+                $data = array(
+                    "Begriff" => $row["Begriff"],
+                    "Artikel" => $row["Artikel"],
+                    "Satz" => $row["Satz"],
+                    "PersischerSatz" => $row["PersischerSatz"],
+                    "Persisch" => $row["Persisch"]
+                );
             }
+            $stmt->closeCursor();
+        } catch (PDOException $e) {
+            echo "Fehler bei der Abfrage: " . $e->getMessage();
         }
 
-        return $result;
+        return $data;
     }
 
     protected function generateView():void

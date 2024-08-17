@@ -27,13 +27,19 @@ function processData() {
 
 function process(intext){
     "use strict";
-    let artikel = intext.Artikel;
-    let begriff = intext.Begriff;
-    let satz = intext.Satz;
+    if (!intext || typeof intext !== 'object') {
+        console.error("Ungültige Daten übergeben:", intext);
+        return;
+    }
+
+    let artikel = intext.Artikel || "";
+    let begriff = intext.Begriff + ": " || "";
+    let satz = intext.Satz || "";
+
     let artikelH = document.getElementById("artikel");
     artikelH.textContent = artikel;
     let begriffH = document.getElementById("begriff");
-    begriffH.textContent = begriff + ": ";
+    begriffH.textContent = begriff;
     let satzH = document.getElementById("satz");
     satzH.textContent = satz;
 

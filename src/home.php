@@ -6,9 +6,17 @@ class home extends Page
 {
     protected $index;
     protected $message;
+    protected $benutzername = '';
+    protected $score = 0;
+    protected $avatar = '';
     protected function __construct()
     {
         parent::__construct();
+        if(isset($_SESSION['benutzername']) && isset($_SESSION['score']) && isset($_SESSION['avatar'])){
+            $this->benutzername = htmlspecialchars($_SESSION['benutzername']);
+            $this->score = $_SESSION['score'];
+            $this->avatar = htmlspecialchars($_SESSION['avatar']);
+        }
     }
 
     public function __destruct()
@@ -61,10 +69,10 @@ class home extends Page
                 </section>
                 <section class="login_data">
                     <section id="user_pic_name">
-                        <img src="defaultProfile.png" id="user_pic" alt="">
-                        <p id="login_user_name">Name</p>
+                        <img src="{$this->avatar}" id="user_pic" alt="">
+                        <p id="login_user_name">{$this->benutzername}</p>
                     </section>
-                    <p>Score: <span id="user_score">-</span></p>
+                    <p>Score: <span id="user_score">{$this->score}</span></p>
                 </section>
             </nav>
         HTML;

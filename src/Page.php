@@ -17,6 +17,7 @@ abstract class Page
     public function __destruct()
     {
         // to do: close database
+        $this->_database = null;
     }
 
     protected function generatePageHeader(string $title = "", string $style = "", bool $autoreload = false): void

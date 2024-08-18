@@ -1,0 +1,53 @@
+form{
+    display: flex;
+    flex-direction: column;
+}
+
+.custom-select {
+    position: relative;
+    display: inline-block;
+    width: 200px;
+}
+
+.select-selected {
+    background-color: #ddd;
+    border: 0.1px solid #ccc;
+    padding: 10px;
+    cursor: pointer;
+    height: 5em;
+    width: 5em;
+}
+
+.select-selected img{
+    height: 5em;
+    width: 5em;
+}
+
+.select-items {
+    position: absolute;
+    background-color: #f9f9f9;
+    border: 0.1em solid #ccc;
+    z-index: 99;
+    width: 100%;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.select-items section {
+    padding: 10px;
+    cursor: pointer;
+}
+
+.select-items section:hover {
+    background-color: #ddd;
+}
+
+.select-hide {
+    display: none;
+}
+
+.select-items img {
+    max-width: 3em;
+    max-height: 3em;
+    vertical-align: middle;
+    margin-right: 10px;
+}

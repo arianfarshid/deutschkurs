@@ -159,3 +159,43 @@ td {
     font-weight: bold;
     font-size: 1.2em;
 }
+
+.dropdown{
+    position: relative;
+    display: inline-block;
+}
+
+.dropbtn{
+    background-color: #151527;
+    color: white;
+    padding: 0.5em;
+    font-size: 1.2em;
+    border: none;
+    cursor: pointer;
+    margin-top: 1.8em;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 0.5em 0.8em;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.hover-green a:hover, .dropbtn:hover{
+    color: #4CAF50;
+}
+

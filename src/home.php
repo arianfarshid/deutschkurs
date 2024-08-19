@@ -61,11 +61,19 @@ class home extends Page
             </header>
             <nav>
                 <img src="logo.png" id="logo" alt="">
-                <section class="navigation">
-                    <a href="home.php?id=artikel" id="navArtikel">Deutsche Artikel</a>
-                    <a href="home.php?id=uebersetzer" id="navUebersetzer">Übersetzer</a>
-                    <a href="home.php?id=Grammatik" id="navGrammatik">Grammatik</a>
-                    <a href="home.php?id=rechtschreibung" id="navRechtschreibung">Rechtschreibung</a>
+                <section class="navigation hover-green">
+                    <a href="home.php?id=forum" id="navForum">Forum</a>
+                    <a href="home.php?id=nutzer" id="navNutzer">Nutzer</a>
+                    <a href="home.php?id=rangliste" id="navRangliste">Rangliste</a>
+                    <section class="dropdown">
+                        <button class="dropbtn">Deutschkurs &#9660;</button>
+                        <section class="dropdown-content hover-green">
+                            <a href="home.php?id=artikel" id="navArtikel">Deutsche Artikel</a>
+                            <a href="home.php?id=uebersetzer" id="navUebersetzer">Übersetzer</a>
+                            <a href="home.php?id=grammatik" id="navGrammatik">Grammatik</a>
+                            <a href="home.php?id=rechtschreibung" id="navRechtschreibung">Rechtschreibung</a>
+                        </section>
+                    </section>
                 </section>
                 <section class="login_data">
                     <section id="user_pic_name">

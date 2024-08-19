@@ -40,6 +40,8 @@ class Login extends Page
         return $data;
     }
 
+
+
     protected function generateView():void
     {
         $data = $this->getViewData();
@@ -47,19 +49,45 @@ class Login extends Page
         switch ($this->action) {
             case 'login':
                 echo <<< HTML
-                    
+                    <section class="container">
+                        <section class="flex-box">
+                            <h1 class="margin-bottom">Login</h1>
+                            <form action="login.php?action=login" method="post" accept-charset="utf-8">
+                                <label for="benutzername">Benuztername:</label>
+                                <input type="text" class="margin-bottom" name="benutzernameLogin" id="benutzername" value="" required>
+                                <label for="passwort">Passwort:</label>
+                                <input type="password" class="margin-bottom" name="passwortLogin" id="passwort" value="" required>
+                                <input type="submit" value="Login">
+                            </form>
+                            <p class="login-link"><a href="login.php?action=registration">Sie haben noch keinen Account?</a></p>
+                        </section>
+                    </section>
                 HTML;
             break;
             case 'registration':
+                $errorMessagePasswort = '';
+                $errorMessageBenutzername = '';
+                if(isset($_SESSION['errorMessagePasswort'])) {
+                    $errorMessagePasswort = $_SESSION['errorMessagePasswort'];
+                }
+                if(isset($_SESSION['errorMessageBenutzername'])) {
+                    $errorMessageBenutzername = $_SESSION['errorMessageBenutzername'];
+                }
                 echo <<< HTML
                     <script src="login.js"></script>
-                    <section class="registration">
-                        <h1>Registrieren</h1>
+                    <section class="container"> 
                         <section class="flex-box">
+                        <h1 class="margin-bottom">Registrieren</h1>
                             <form method="post" action="login.php?action=registration" accept-charset="UTF-8">
-                                <input type="text" name="benutzername" id="benutzername" value="" placeholder="Benutzernamen eingeben..." required>
-                                <input type="password" name="passwort" id="passwort" value="" placeholder="Passwort eingeben..." required>
-                                <input type="password" name="bestaetigen" id="bestaetigen" value="" placeholder="Passwort wiederholen..." required>
+                                <label for="benutzername">Benuztername:</label>
+                                <input type="text" class="margin-bottom" name="benutzername" id="benutzername" value="" required>
+                                {$errorMessageBenutzername}
+                                <label for="passwort">Passwort:</label>
+                                <input type="password" class="margin-bottom" name="passwort" id="passwort" value="" required>
+                                <label for="bestaetigen">Passwort bestätigen:</label>
+                                <input type="password" class="margin-bottom" name="bestaetigen" id="bestaetigen" value="" required>
+                                {$errorMessagePasswort}
+                                <label for="avatarSelect">Avatar wählen:</label>
                                 <section class="custom-select">
                                     <select class="select-hide" id="avatarSelect" name="avatarSelect">
                 HTML;
@@ -70,7 +98,7 @@ class Login extends Page
                 }
                 echo <<< HTML
                     </select>
-                    <section class="select-selected">
+                    <section class="select-selected margin-bottom">
                         <img id="selectedImage" src="avatar/avatar1.png" alt="">
                     </section>
                     <section class="select-items select-hide">
@@ -86,11 +114,10 @@ class Login extends Page
                     </section>
                     <input type="submit" value="Registrieren">
                     </form>
+                    <p class="login-link"><a href="login.php?action=login">Sie haben bereits einen Account?</a></p>
                     </section>
                     </section>
                 HTML;
-
-
 
             break;
             default:
@@ -105,7 +132,18 @@ class Login extends Page
         $stmt->bindValue(':id', $id, PDO::PARAM_INT);
         $stmt->execute();
         $row = $stmt->fetch(PDO::FETCH_ASSOC);
+        $stmt->closeCursor();
         return $row['pfad'];
+    }
+
+    private function checkBenutzername($benutzername):bool
+    {
+        $stmt = $this->_database->prepare('SELECT benutzername FROM nutzer WHERE benutzername = :username');
+        $stmt->bindValue(':username', $benutzername, PDO::PARAM_STR);
+        $stmt->execute();
+        $row = $stmt->fetch(PDO::FETCH_ASSOC);
+        $stmt->closeCursor();
+        return $row['benutzername'] == $benutzername;
     }
 
     protected function processReceivedData():void
@@ -115,26 +153,55 @@ class Login extends Page
             $benutzername = htmlspecialchars($_POST['benutzername']);
             $passwort = htmlspecialchars($_POST['passwort']);
             $bestaetigen = htmlspecialchars($_POST['bestaetigen']);
-            $avatar = $_POST['avatarSelect'];
-            $avatar = $this->getAvatarPath($avatar);
+            $avatarId = $_POST['avatarSelect'];
+            $avatar = $this->getAvatarPath($avatarId);
 
             if($passwort != $bestaetigen) {
-
+                $_SESSION['errorMessagePasswort'] = "<p style='color: red;'>Passwörter stimmen nicht überein</p>";
+            } else if($this->checkBenutzername($benutzername)){
+                $_SESSION['errorMessageBenutzername'] = "<p style='color: red;'>Benutzername existiert bereit</p>";
             } else {
                 $passwort = hash('sha3-256', $passwort);
                 $stmt = $this->_database->prepare(
                     'INSERT INTO nutzer(benutzername, passwort, score, avatarId)
-                     VALUES (:benutzername, :passwort, 0, :avatar)'
+                     VALUES (:benutzername, :passwort, 0, :avatarId)'
                 );
                 $stmt->bindValue(':benutzername', $benutzername, PDO::PARAM_STR);
                 $stmt->bindValue(':passwort', $passwort, PDO::PARAM_STR);
-                $stmt->bindValue(':avatar', $avatar, PDO::PARAM_STR);
+                $stmt->bindValue(':avatarId', $avatarId, PDO::PARAM_STR);
                 $stmt->execute();
 
                 $_SESSION['benutzername'] = $benutzername;
                 $_SESSION['score'] = 0;
                 $_SESSION['avatar'] = $avatar;
 
+                header('Location: home.php?id=artikel');
+            }
+        }
+        if(isset($_POST['benutzernameLogin']) && isset($_POST['passwortLogin'])) {
+            $benutzername = htmlspecialchars($_POST['benutzernameLogin']);
+            $passwort = htmlspecialchars($_POST['passwortLogin']);
+            $passwort = hash('sha3-256', $passwort);
+
+            $stmt = $this->_database->prepare(
+                'SELECT passwort, score, pfad
+                 FROM nutzer
+                 NATURAL JOIN avatar
+                 WHERE benutzername = :benutzername'
+            );
+            $stmt->bindValue(':benutzername', $benutzername, PDO::PARAM_STR);
+            $stmt->execute();
+            $row = $stmt->fetch(PDO::FETCH_ASSOC);
+            $stmt->closeCursor();
+
+            if($row == false){
+
+            } else if($passwort != $row['passwort']) {
+
+            } else{
+                $_SESSION['benutzername'] = $benutzername;
+                $_SESSION['score'] = $row['score'];
+                $_SESSION['avatar'] = $row['pfad'];
                 header('Location: home.php?id=artikel');
             }
         }

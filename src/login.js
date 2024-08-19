@@ -1,32 +1,29 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const selected = document.querySelector('.select-selected');
-    const items = document.querySelector('.select-items');
-    const options = items.querySelectorAll('section');
+    const selected = document.getElementById('selectedImage').parentElement;
+    const items = document.getElementsByClassName('select-items')[0];
+    const options = items.getElementsByTagName('section');
 
-    // Öffne/Schließe das Dropdown-Menü
     selected.addEventListener('click', function() {
         items.classList.toggle('select-hide');
         selected.classList.toggle('select-arrow-active');
     });
 
-    // Aktualisiere das ausgewählte Bild
-    options.forEach(function(option) {
-        option.addEventListener('click', function() {
+    for (let i = 0; i < options.length; i++) {
+        options[i].addEventListener('click', function() {
             const imageSrc = this.getAttribute('data-image');
             const value = this.getAttribute('data-value');
-            selected.querySelector('img').src = imageSrc;
 
-            // Setze den Wert im versteckten Dropdown-Menü (für Formulareinsendung)
+            selected.getElementsByTagName('img')[0].src = imageSrc;
+
             const selectElement = document.getElementById('avatarSelect');
             selectElement.value = value;
 
-            // Schließe das Dropdown-Menü nach Auswahl
             items.classList.add('select-hide');
             selected.classList.remove('select-arrow-active');
         });
-    });
+    }
 
-    // Schließe das Dropdown, wenn man woanders hinklickt
+
     document.addEventListener('click', function(e) {
         if (!selected.contains(e.target)) {
             items.classList.add('select-hide');
